@@ -1,18 +1,14 @@
 IMPORTANT: The development is still in process.
 
 Authors:
-	Juan Antonio Osorio <jaosorior@gmail.com>
-	Luis Fernando Hinojosa <lf.hinojosa@gmail.com>
-	David Valenzuela <david.valenzuela.88@gmail.com>
-	Jose Vicente Ramirez <pepermz@gmail.com>
-	Mario Gerardo Trevinho <mario_tc88@hotmail.com>
+	Roberto Aceves <roberto.aceves@gmail.com>
+	Miguel Alejandro González <maggonzz@gmail.com>
 
-This is an implementation of the NAT64 mechanism as described in the RFC6146.
-It's being implemented as a Netfilter target module.
+This is an updated version of the previously released implementation of NAT64.
 
-module dependencies (modprobe): ipv6, ip_tables, nf_conntrack, nf_conntrack_ipv4
+This version includes:
 
-Directories:
-	/mod : includes the kernel module' source code and respective Makefile.
-	/usr : include the iptables module (userspace interface).
-	/include : includes the header files used.
+	UDP port bug fix after sending back the packet to the IPv6 client.
+	TCP was implemented.
+	Ability to add static routes using ioctl and a character device.
+	New socket programs are included to test UDP and TCP communication. 
